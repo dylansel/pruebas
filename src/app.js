@@ -61,7 +61,7 @@ function navanimate() {
     let posicion_top = top.getBoundingClientRect().top;
     let posicion_aboutMe = document.getElementById("aboutMe").getBoundingClientRect().top
     let header = document.getElementById("header")
-    console.log(posicion_top)
+    
     let oculto = false
     let activo = false
     if(posicion_aboutMe < 60 && oculto == false ){ 

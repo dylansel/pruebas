@@ -214,11 +214,20 @@ body {
   transform: translate(0px, -3px);
 }
 .boton-menu{
+  margin-left: 15px;
   display: none;
 }
 .boton-menu i {
   color: var(--secundary-font);
   font-size: 20px;
+}
+.boton-menu i:hover{
+  cursor: pointer;
+  color: rgb(0, 255, 255) !important;
+  text-shadow: 0 0 10px black;
+  transition: transform 0.1s;
+  transform: translate(0px, -3px);
+
 }
 
 
@@ -388,10 +397,10 @@ body::-webkit-scrollbar-thumb:hover {
     
   }
   .nav ol li{
-    margin-left: 15%;
+    margin-left: 30%;
     align-items: right;
     text-align: center;
-    width: 90%; 
+    width: 100%; 
     background:rgba(189, 189, 189, 0.87);
     border-radius: 25px;
 
@@ -400,6 +409,12 @@ body::-webkit-scrollbar-thumb:hover {
     text-align: center;
     width:100%;
     
+  }
+  .nav li:hover {
+    cursor: pointer;
+    background: #ab22fa;
+    transition: transform, color, .3s;
+    transform: translateX(0);
   }
 
 }
