@@ -8,7 +8,7 @@ const Inicio = document.getElementById('page-top')
 const AboutMe = document.getElementById('aboutMe')
 const Portafolios = document.getElementById('portafolios')
 const Contacto = document.getElementById('contacto') 
-var respMenuActive = false;
+
 //dark - Light mode
 var darkmode = false
 const change_dark_light = (change) =>{
@@ -130,17 +130,18 @@ function sectionNavOn(){
     bContacto.style.fontWeight = (ContactoTop <= 200)?"700":"400";
     
 }
-    
+let respMenuActive = false;    
 function responsiveMenu(){
 
     if(respMenuActive === false){
-        repMenuActive = true
-        document.getElementById("nav-res").style.transform= "translate(-100vw)"
-        console.log("activado")
-    }else{
-        repMenuActive = false
+        respMenuActive = true;
+        document.getElementById("nav-res").style.transform= "translate(0)"
+        
+
+    }else if (respMenuActive === true){
+        respMenuActive = false
         document.getElementById("nav-res").style.transform= "translate(100vw)"
-        console.log("desactivado")
+        
     }
 }
 

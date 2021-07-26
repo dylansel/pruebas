@@ -370,9 +370,12 @@ body::-webkit-scrollbar-thumb:hover {
 @media screen and (max-width:700px) {
   .boton-menu{
   display: block;
+  
+  z-index: 1002;
   }
   .nav ol{
-    z-index: 10000;
+    transition: transform .6s;
+    z-index: 1000;
     position: fixed;
     top: 0;
     left: 0;
@@ -381,13 +384,14 @@ body::-webkit-scrollbar-thumb:hover {
     transform: translate(100vw);
     background:rgba(0, 0, 0, 0.781);
     flex-direction: column;
-    align-items: center;
+    align-items: right;
     justify-content: center;
     
   }
   .nav ol li{
+    align-items: right;
     text-align: center;
-    width: 100%; 
+    width: 80%; 
     background:rgba(189, 189, 189, 0.87);
 
   }
