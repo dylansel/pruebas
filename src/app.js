@@ -124,6 +124,7 @@ function sectionNavOn(){
     let AboutMeTop = AboutMe.getBoundingClientRect().top
     let PortafoliosTop = Portafolios.getBoundingClientRect().top;
     let ContactoTop = Contacto.getBoundingClientRect().top;
+    let navRes = document.getElementById("nav-res")
     bInicio.style.fontWeight = (InicioTop <= 0 && AboutMeTop >200)?"700":"400";
     bAboutMe.style.fontWeight = (AboutMeTop <= 200 && PortafoliosTop >200)?"700":"400";
     bPortafolios.style.fontWeight = (PortafoliosTop <= 200 && ContactoTop >200)?"700":"400";
