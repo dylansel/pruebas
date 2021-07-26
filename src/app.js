@@ -8,7 +8,7 @@ const Inicio = document.getElementById('page-top')
 const AboutMe = document.getElementById('aboutMe')
 const Portafolios = document.getElementById('portafolios')
 const Contacto = document.getElementById('contacto') 
-
+var respMenuActive = false;
 //dark - Light mode
 var darkmode = false
 const change_dark_light = (change) =>{
@@ -131,4 +131,16 @@ function sectionNavOn(){
     
 }
     
+function responsiveMenu(){
+
+    if(respMenuActive === false){
+        repMenuActive = true
+        document.getElementById("nav-res").style.transform= "translate(-100vw)"
+        console.log("activado")
+    }else{
+        repMenuActive = false
+        document.getElementById("nav-res").style.transform= "translate(100vw)"
+        console.log("desactivado")
+    }
+}
 

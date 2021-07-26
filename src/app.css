@@ -378,7 +378,7 @@ body::-webkit-scrollbar-thumb:hover {
     left: 0;
     width: 100%;
     height:100vh;
-    
+    transform: translate(100vw);
     background:rgba(0, 0, 0, 0.781);
     flex-direction: column;
     align-items: center;
