@@ -278,7 +278,6 @@ main {
 
 .portada-texto {
   margin-left: 10%;
-  border-radius: 12px;
 }
 
 .portada-texto h1 {
@@ -402,5 +401,39 @@ body::-webkit-scrollbar-thumb:hover {
     width:100%;
     
   }
+
+}
+
+@media screen and (max-width:500px) {
+
+  
+.portada {
+  flex-direction: column;
+}
+#avatar-portada{
+  width: 50%;
+}
+#avatar-portada img {
+  transform: translate(-20px, 0px);
+  width: 110%;
+}
+.portada-texto {
+  margin: auto;
+  margin-top: 40px;
+  text-align:center
+}
+
+.portada-texto h1 {
+  font-size: 50px;
+  color: var(--portada-font2);
+  font-family: "Hind Madurai";
+  line-height: 3.5rem;
+}
+
+.portada-texto h2 {
+  font-size: 35px;
+  color: var(--portada-font1);
+  font-family: "Hind Madurai";
+}
 
 }
