@@ -1,0 +1,400 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&family=Noto+Sans+HK:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+:root {
+  --primary-background: rgb(255, 242, 242);
+  --secundary-background: rgb(27, 27, 27);
+  --header-background1: rgba(31, 31, 31, 0.082);
+  --header-background2: rgb(49, 49, 49);
+  --primary-font: black;
+  --secundary-font: white;
+  --alternative-font:rgb(17, 17, 17);
+  --portada-font1: #7400b8;
+  --portada-font2: #ab22fa;
+  --title-section-color:#7400b8;
+}
+html {
+  scroll-behavior: smooth;
+  
+}
+.negrita{
+  font-weight: bold;
+}
+
+/*Preloader*/
+
+.preloader h2 {
+  font-size: 50px;
+  font-weight: 400;
+  position: absolute;
+  margin-bottom: 150px;
+  font-family: "Hind Madurai";
+  color: var(--primary-font);
+}
+
+.preloaderScroll {
+  overflow: hidden !important;
+}
+
+#preloader {
+  user-select: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 10000 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background: var(--primary-background);
+}
+
+.preloader {
+  margin: auto;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary-font);
+  animation: lds-grid 1.2s linear infinite;
+}
+
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  animation-delay: 0s;
+}
+
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  animation-delay: -0.4s;
+}
+
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  animation-delay: -0.8s;
+}
+
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  animation-delay: -1.2s;
+}
+
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  animation-delay: -1.6s;
+}
+
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* end Preloader*/
+
+body {
+  background-color: var(--primary-background) !important;
+  color: var(--primary-font);
+  transition: background, color, 0.3s;
+  overflow-x: hidden;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  transition: color 1s, background 0.6s, height 0.2s, backdrop-filter 0.2s, transform 0.5s;
+  z-index: 10;
+}
+
+.logo-nav {
+  margin: 5px;
+  width: 40px;
+}
+
+.logo-nav img {
+  width: 100%;
+}
+
+.nav {
+  margin-left: 60px;
+}
+
+.nav ol {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--secundary-font);
+  margin: 15px;
+  font-size: 18px;
+}
+
+.nav li:hover {
+  transition: transform, color, .3s;
+  transform: translatey(-3px);
+}
+
+.nav_a {
+  transition: all .2s ;
+}
+
+.nav a:hover {
+  color: rgba(19, 239, 255, 0.952) !important;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.623);
+}
+
+.icon-dark-light i {
+  font-size: 20px;
+  color: var(--secundary-font);
+}
+
+.icon-dark-light i:hover {
+  cursor: pointer;
+  color: rgb(255, 238, 0) !important;
+  text-shadow: 0 0 10px black;
+  transition: transform 0.1s;
+  transform: translate(0px, -3px);
+}
+.boton-menu{
+  display: none;
+}
+.boton-menu i {
+  color: var(--secundary-font);
+  font-size: 20px;
+}
+
+
+
+
+
+main {
+  
+  margin: auto;
+  width: 90%;
+  padding-top: 80px;
+}
+.padre-portada{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height: 100vh;
+}
+.portada {
+  display: flex;
+  width:80%;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+  
+}
+
+#background-portada {
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url(img/fondo-\ portada.png);
+  background-attachment: fixed;
+  background-position: 20% 60%;
+  z-index: 3;
+  filter: brightness(0.2);
+}
+
+#avatar-portada {
+  backdrop-filter: blur(3px);
+  width: 200px;
+  background: rgba(233, 233, 233, 0.075);
+  border-radius: 20px;
+}
+
+#avatar-portada img {
+  margin: auto;
+  transform: translate(-30px, 0px);
+  width: 200px;
+}
+
+.portada-texto {
+  margin-left: 10%;
+  border-radius: 12px;
+}
+
+.portada-texto h1 {
+  font-size: 60px;
+  color: var(--portada-font2);
+  font-family: "Hind Madurai";
+  line-height: 3rem;
+}
+
+.portada-texto h2 {
+  font-size: 45px;
+  color: var(--portada-font1);
+  font-family: "Hind Madurai";
+}
+
+.about-me {
+  padding: 10px;
+  margin: auto;
+  margin-top: calc(100vh - 60px);
+  
+}
+.title-section{
+  font: 30px;
+  font-weight: 700;
+  color:var(--title-section-color);
+
+}
+.about-me h2{
+  font-size:30px;
+}
+.conteiner {
+  width:95%;
+  margin:auto;
+  display: flex;
+  justify-content:space-between;
+  margin-top:30px;
+  
+}
+.cont-about .cont{
+  border-radius:15px;
+  padding:15px;
+  margin: 10px;
+  background-color: #6868684b;
+}
+.presentacion{
+  width:60%;
+  
+}
+.habilidades{
+  width:35%;
+  
+}
+.habilidades .cont li{
+  list-style:none;
+  
+  /*list-style-image: url(img/tick.png);
+  list-style-type: disc;
+*/
+ 
+}
+
+
+/*scroll styles*/
+
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background: var(--primary-background);;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: rgba(66, 66, 66, 0.842);
+  border: 3px solid  var(--primary-background);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(133, 133, 133, 0.705);
+  
+}
+
+.caja-basica{
+  width: 90%;
+  height:600px;
+  margin: auto;
+  background:red;
+}
+
+@media screen and (max-width:700px) {
+  .boton-menu{
+  display: block;
+  }
+  .nav ol{
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100vh;
+    
+    background:rgba(0, 0, 0, 0.781);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .nav ol li{
+    text-align: center;
+    width: 100%; 
+    background:rgba(189, 189, 189, 0.87);
+
+  }
+  .nav_a{
+    text-align: center;
+    width:100%;
+    
+  }
+
+}

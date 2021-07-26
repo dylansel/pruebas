@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Seltzer</title>
+    <link rel="shortcut icon" href="src/img/logo.png">
+    <meta name="description"
+        content="Soy Desarrollador Web Front-End. Hice esta pagina para presentar mi experiencia y proyectos. Entra para mas informacion">
+    <meta name="author" content="Dylan Seltzer">
+    <meta name="keywords" content="Desarrollador web,front end, dylan, seltzer">
+    <meta property="og:image" content="src/img/logo.png">
+    <meta property="og:description"
+        content="Soy Desarrollador Web Front-End. Hice esta pagina para presentar mi experiencia y proyectos. Entra para mas informacion">
+    <meta property="og:title" content="Dylan Seltzer">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/app.css">
+    <link rel="stylesheet" href="src/darkmode.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body class="preloaderScroll" id="page-top">
+    <!--Preloader-->
+    <div class="preloader" id="preloader">
+        <h2>Dylan Seltzer</h2>
+        <div class="lds-grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!--Header-->
+
+    <header class="header" id="header">
+        <div class="logo-nav"><a href="https://www.dylansel.tk/"><img src="src/img/logo.png" title="Logo"
+                    alt="Logo DS"></a></div>
+        <div class="nav" ID="mainNav">
+            <ol>
+                <li><a href="#page-top" class="nav_a" id="bInicio">Inicio</a></li>
+                <li><a href="#aboutMe" class="nav_a" id="bAboutMe">Acerca de</a></li>
+                <li><a href="#portafolios" class="nav_a" id="bPortafolios">Portafolios</a></li>
+                <li><a href="#contacto" class="nav_a" id="bContacto">Contacto</a></li>
+                <li class="icon-dark-light" onclick="change_dark_light(true)"><i title="Activar modo oscuro"class="fas fa-sun nav_a"></i></li>
+            </ol>
+            <div class="boton-menu"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+    <main>
+        <div id="background-portada"></div>
+        <div class="padre-portada">
+            <section class="portada" id="portada">
+            <div id="avatar-portada"><img src="src/img/Avatar-dylan.png" alt=""></div>
+            <div class="portada-texto">
+
+                <h1>Dylan Seltzer</h1>
+                <h2>Desarrollador Web <span style="display: inline-block">Front End</span></h2>
+            </div>
+
+            </section>
+        </div>
+        
+        
+        <section class="about-me" id="aboutMe">
+            <h2 class="title-section">Acerca De</h2>
+            <div class="conteiner">
+                <div class="cont-about presentacion">
+                    <h3>¿Quien Soy?</h3>
+                    <p class="cont">Hola, soy <span class="negrita">Dylan Seltzer</span>, desde chiquito me interese por la tegnologia y la computacion. <br> A mi
+                        criterio la programacion es un arte, cualquera puede dibujar o tocar un instrumento, pero solo
+                        un verdadero artista se gana la vida <span class="negrita">haciendo lo que ama</span>.</p>
+                </div>
+                <div class="cont-about habilidades">
+                    <h3>Cualidades</h3>
+                    <div class="cont">
+                        <ul>
+                            <li>✔️ Desarrollador Web Front End</li>
+                            <li>✔️ Resolucion de conflictos</li>
+                            <li>✔️ Autodidacta</li>
+                            <li>✔️ Proactivo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section class="portafolios caja-basica" id="portafolios">
+        <h2>Portafolios</h2>
+        </section>
+        <section class="contacto caja-basica" id="contacto">
+            <h2>contacto</h2>
+        </section>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </main>
+
+
+
+
+
+
+
+    <!--Jquery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <!--Javascript APP-->
+    <script src="src/app.js"></script>
+</body>
+
+</html>
