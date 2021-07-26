@@ -8,7 +8,7 @@ const Inicio = document.getElementById('page-top')
 const AboutMe = document.getElementById('aboutMe')
 const Portafolios = document.getElementById('portafolios')
 const Contacto = document.getElementById('contacto') 
-
+var respMenuActive = false; 
 //dark - Light mode
 var darkmode = false
 const change_dark_light = (change) =>{
@@ -101,7 +101,7 @@ if (posicion_top < 0 ){
 
 
 function scrollactive() {
-    if(screen.width>700){navanimate()}
+    if(!respMenuActive ){navanimate()}
     sectionNavOn()
 }
 
@@ -130,17 +130,19 @@ function sectionNavOn(){
     bContacto.style.fontWeight = (ContactoTop <= 200)?"700":"400";
     
 }
-let respMenuActive = false;    
+   
 function responsiveMenu(){
+    if(screen.width >700){return}
 
     if(respMenuActive === false){
         respMenuActive = true;
-        document.getElementById("nav-res").style.transform= "translate(0)"
+        document.getElementById("nav-res").style.transform= "translate(0,0)"
         
 
     }else if (respMenuActive === true){
         respMenuActive = false
-        document.getElementById("nav-res").style.transform= "translate(100vw)"
+        document.getElementById("nav-res").style.transform= "translate(100vw,0px)"
+        
         
     }
 }
