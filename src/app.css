@@ -376,6 +376,11 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media screen and (max-width:700px) {
+  .navres{
+    margin-right: -30px !important;
+    display: flex;
+  
+  }
   .boton-menu{
   display: block;
   
@@ -421,15 +426,15 @@ body::-webkit-scrollbar-thumb:hover {
     transition: transform, color, .3s;
     transform: translateX(0);
   }
-  .fas{
-    font-size:25px !important;
+  .navres .fas{
+    font-size:30px !important;
   }
 
 }
 
 @media screen and (max-width:600px) {
 
-  
+
 .portada {
   flex-direction: column;
 }
