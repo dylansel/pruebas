@@ -106,6 +106,8 @@ function scrollactive() {
 }
 
 window.addEventListener("scroll",scrollactive );
+$('#nav-res').on("click",function(){responsiveMenu()})
+
 function cambiarVar(color){
         
         var all = document.getElementsByClassName("nav_a");
@@ -131,19 +133,21 @@ function sectionNavOn(){
     bContacto.style.fontWeight = (ContactoTop <= 200)?"700":"400";
     
 }
-   
+
+
+
 function responsiveMenu(){
     if(screen.width >700){return}
 
     if(respMenuActive === false){
         respMenuActive = true;
         document.getElementById("nav-res").style.transform= "translate(0,0)"
-        
+        cambiarVar("white")
 
     }else if (respMenuActive === true){
         respMenuActive = false
         document.getElementById("nav-res").style.transform= "translate(100vw,0px)"
-        
+        navanimate()
         
     }
 }

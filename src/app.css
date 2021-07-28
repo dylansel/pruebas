@@ -421,6 +421,9 @@ body::-webkit-scrollbar-thumb:hover {
     transition: transform, color, .3s;
     transform: translateX(0);
   }
+  .fas{
+    font-size:25px !important;
+  }
 
 }
 
@@ -454,6 +457,19 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 35px;
   color: var(--portada-font1);
   font-family: "Hind Madurai";
+}
+.conteiner{
+  flex-direction: column;
+  align-items: center;
+}
+.presentacion{
+  width:100%;
+  
+}
+.habilidades{
+  margin-top:20px;
+  width:100%;
+  
 }
 
 }
