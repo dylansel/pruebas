@@ -200,17 +200,17 @@ function sectionAboutMeAnimation(){
                         setTimeout(function(){
                         
                             for (let i = 1;i<=8; i++){
-                                setTimeout(function(){document.querySelector(".ico"+i).classList.add("fade-effect-active")},i*500)
+                                setTimeout(function(){document.querySelector(".ico"+i).classList.add("fade-effect-active")},i*350)
                             };
                                 
                                 
                                 
                             
-                        },200)
+                        },100)
                         
                         
                         
-                    },200)
+                    },100)
                     
             },2000)
         
