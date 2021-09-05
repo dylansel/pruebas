@@ -451,9 +451,6 @@ main {
 
 }
 
-.pbox img:hover {
-  filter:grayscale(1) blur(0.8px) ;
-}
 .portada-detalles{
   transition:1s;
   transform:translateY(-150px);
