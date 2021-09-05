@@ -49,7 +49,7 @@
             <ol id="nav-res">
                 <li><a href="#page-top"  class="nav_a" id="bInicio">Inicio</a></li>
                 <li><a href="#aboutMe"  class="nav_a" id="bAboutMe">Acerca de</a></li>
-                <li><a href="#portafolios"  class="nav_a" id="bPortafolios">Portafolios</a></li>
+                <li><a href="#portafolios"  class="nav_a" id="bPortafolios">Portafolio</a></li>
                 <li><a href="#contacto"  class="nav_a" id="bContacto">Contacto</a></li>
             </ol>
             <div class="navres">
@@ -73,15 +73,13 @@
             </section>
         </div>
         
-        
+        <!--seccion about-me-->
         <section class="about-me" id="aboutMe">
             <h2 class="title-section">Acerca De</h2>
-            <div class="conteiner">
+            <div class="conteiner flex" id="presentacion_habilidades">
                 <div class="cont-about presentacion">
                     <h3>¿Quien Soy?</h3>
-                    <p class="cont">Hola, soy <span class="negrita">Dylan Seltzer</span>, desde chiquito me interese por la tegnologia y la computacion. <br> A mi
-                        criterio la programacion es un arte, cualquera puede dibujar o tocar un instrumento, pero solo
-                        un verdadero artista se gana la vida <span class="negrita">haciendo lo que ama</span>.</p>
+                    <p class="cont">Hola, soy <span class="negrita">Dylan Seltzer</span>, desde chiquito me interese por la tecnología y la computación. A mi criterio la programación es un arte, cualquiera puede dibujar o tocar un instrumento, pero solo un verdadero artista se gana la vida <span class="negrita">haciendo lo que ama</span>.</p>
                 </div>
                 <div class="cont-about habilidades">
                     <h3>Cualidades</h3>
@@ -95,15 +93,85 @@
                     </div>
                 </div>
             </div>
+            <div class="conteiner">
+                <div class="programas" id="programas">
+                    <h3>Programas que manejo</h3>
+                    <div class="cont iconos programas">
+                        <div class="grid icono1">
+                            <div class="icono ico1"><img src="src/img/logos/Word-logo.png" alt="Word logo"><h4>Word</h4></div>
+                            <div class="icono ico2"><img src="src/img/logos/Excel-logo.png" alt="Excel logo"><h4>Excel</h4></div>
+                            <div class="icono ico3"><img src="src/img/logos/PowerPoint-logo.png" alt="PowerPoint logo"><h4>PowerPoint</h4></div>
 
+                        </div>    
+                        <div class="grid icono1">
+                            <div class="icono ico4"><img src="src/img/logos/Drive-logo.png" alt="Drive logo"><h4>Drive</h4></div>
+                            
+                            <div class="icono ico5"><img src="src/img/logos/Photoshop-logo.png" alt="Photoshop logo"><h4>PhotoShop</h4></div>
+                            <div class="icono ico6"><img src="src/img/logos/illustrator-logo.png" alt="illustrator logo"><h4>Illustrato</h4></div>
+                        </div>
+                        <div class="grid icono2 icon2-programa">
+                            <div class="icono ico7"><img src="src/img/logos/Github-logo.png" alt="GitHube logo"><h4>GitHube</h4></div>
+                            <div class="icono ico8"><img src="src/img/logos/VSC-logo.png" alt="Visual Studio Code logo"><h4>Visual Studio Code</h4></div> 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lenguajes" id="lenguajes">
+                    <h3>Lenguajes</h3>
+                    <div class="cont iconos">
+                        <div class="grid icono1">
+                            <div class="icono"><img src="src/img/logos/HTML5-logo.png" alt="HTML5 logo"><h4>HTML 5</h4></div>
+                            <div class="icono"><img src="src/img/logos/CSS3-logo.png" alt="CSS3 logo"><h4>CSS 3</h4></div>
+                            <div class="icono"><img src="src/img/logos/JS-logo.png" alt="JS logo"><h4>JavaScript</h4></div>
+                        </div>
+                        <div class="grid icono2">
+                            <div class="icono"><img src="src/img/logos/Python-logo.png" alt="Python logo"><h4>Python</h4></div>
+                            <div class="icono"><img src="src/img/logos/SQL-logo.png" alt="SQL logo"><h4>SQL</h4></div>
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </section>
-        <section class="portafolios caja-basica" id="portafolios">
-        <h2>Portafolios</h2>
+
+        <!--seccion portafolio-->
+        <section class="portafolio" id="portafolios">
+        <h2 class="title-section">Portafolio</h2>
+        <div class="conteiner">
+            
+            <div class="box-portafolio" id="box-portafolio">
+                <div class="pbox box1">
+                    <a href="Portafolios/Login/index.html"><img id="img-box1" src="src/img/portadas_portafolio/portada_login.png"  alt="Login Portafolio"></a>
+                    <div class="portada-detalles">
+                        <h5>Prototipo-Login</h5>
+                        <p>Es un prototipo simple de un login basico solo estilos</p>
+                        <p class="box-click">Click en la imagen para abrir</p>
+                    </div>
+                </div>
+                <div class="pbox box2"><a href="Portafolios/Netflix/index.html"><img id="img-box2" src="src/img/portadas_portafolio/portada_netflix.png" alt="Netflix Portafolio"></a>
+                    <div class="portada-detalles">
+                        <h5>Prototipo-Netflix</h5>
+                        <p>Es un prototipo simple de un login basico solo estilos</p>
+                        <p class="box-click">Click en la imagen para abrir</p>
+                    </div>
+                </div>
+                <div class="pbox box3"><a href="Portafolios/Youtube/index.html"><img id="img-box3"src="src/img/portadas_portafolio/portada_youtube.png" alt="Youtube Portafolio"></a>
+                    <div class="portada-detalles">
+                        <h5>Prototipo-Youtube</h5>
+                        <p>Es un prototipo simple de un login basico solo estilos</p>
+                        <p class="box-click">Click en la imagen para abrir</p>
+                    </div>
+                </div>
+                <div class="pbox box4"><a href=""><img id="img-box4" src="" alt=""></a></div>
+                <div class="pbox box5"><a href=""><img id="img-box5" src="" alt=""></a></div>
+                <div class="pbox box6"><a href=""><img id="img-box6" src="" alt=""></a></div>
+            </div>
+        </div>
         </section>
+
+        <!--seccion contacto-->
         <section class="contacto caja-basica" id="contacto">
-            <h2>contacto</h2>
+            <h2 class="title-section">contacto</h2>
         </section>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </main>
 
 

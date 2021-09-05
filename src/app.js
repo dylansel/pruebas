@@ -1,5 +1,6 @@
 
 
+
 const bInicio = document.getElementById('bInicio')
 const bAboutMe = document.getElementById('bAboutMe')
 const bPortafolios = document.getElementById('bPortafolios')
@@ -8,7 +9,11 @@ const Inicio = document.getElementById('page-top')
 const AboutMe = document.getElementById('aboutMe')
 const Portafolios = document.getElementById('portafolios')
 const Contacto = document.getElementById('contacto') 
+const portafolio = document.getElementById("box-portafolio")
 var respMenuActive = false; 
+var Width = screen.width
+var Height = screen.height
+
 //dark - Light mode
 var darkmode = false
 const change_dark_light = (change) =>{
@@ -42,7 +47,7 @@ const change_dark_light = (change) =>{
 }
 
 change_dark_light()
-
+navanimate()
 
 
 
@@ -55,6 +60,7 @@ window.onload = () => {
     $('body').removeClass("preloaderScroll")
 }
 
+//menu
 var ante 
 function navanimate() {
     let top = document.getElementById("page-top");
@@ -66,7 +72,7 @@ function navanimate() {
     let activo = false
     if(posicion_aboutMe < 60 && oculto == false ){ 
         header.style.transition=' color 1s, background  0.6s, height 0.2s, backdrop-filter 0.2s, transform .5s';
-        header.style.transform= "translateY(-70px)";
+        header.style.transform= "translateY(-20vh)";
         cambiarVar("var(--primary-font)")
         oculto = true
         activo = true
@@ -79,23 +85,23 @@ function navanimate() {
         activo = true
     }
 
-if (activo == false) {
+    if (activo == false) {
 
-if (posicion_top < 0 ){
-        header.style.backdropFilter = "blur(4px)";
-        header.style.boxShadow= "0 0 10px black";
-        cambiarVar( darkmode?"var(--primary-font)":"var(--secundary-font)")
-    }else{
-        header.style.backdropFilter = "blur(0px)";
-        header.style.boxShadow= "0 0 0px black";
+        if (posicion_top < 0 ){
+            header.style.backdropFilter = "blur(4px)";
+            header.style.boxShadow= "0 0 10px black";
+            cambiarVar( darkmode?"var(--primary-font)":"var(--secundary-font)")
+        }else{
+            header.style.backdropFilter = "blur(0px)";
+            header.style.boxShadow= "0 0 0px black";
+            
+            cambiarVar( darkmode?"var(--primary-font)":"var(--secundary-font)")
+        }
         
-        cambiarVar( darkmode?"var(--primary-font)":"var(--secundary-font)")
     }
+        ante = posicion_aboutMe
 
-}
-    
-
-    ante = posicion_aboutMe
+        
 }
 
 
@@ -103,10 +109,34 @@ if (posicion_top < 0 ){
 function scrollactive() {
     if(!respMenuActive ){navanimate()}
     sectionNavOn()
+    sectionAboutMeAnimation()
+
 }
 
+
+//event listenings
 window.addEventListener("scroll",scrollactive );
 $('#nav-res').on("click",function(){responsiveMenu()})
+
+let detalleActive= false
+portafolio.addEventListener('mouseover',(e)=>{
+    console.log("activado")
+    
+    for(let i=0;i<=document.getElementsByClassName('pbox').length;i++){
+          $('.portada-detalle-box-active').removeClass("portada-detalle-box-active")
+          $('.portada-detalles-text-active').removeClass("portada-detalles-text-active")
+    }
+    
+    for(let i=0;i<=document.getElementsByClassName('pbox').length;i++){
+      if(e.target && e.target.id=='img-box'+(i+1)){
+        document.getElementsByClassName('pbox')[i].classList.toggle('portada-detalle-box-active')
+        document.getElementsByClassName('portada-detalles')[i].classList.toggle('portada-detalles-text-active')
+    }  
+    }
+
+    
+    
+})
 
 function cambiarVar(color){
         
@@ -137,7 +167,7 @@ function sectionNavOn(){
 
 
 function responsiveMenu(){
-    if(screen.width >700){return}
+    if( Width >700){return}
 
     if(respMenuActive === false){
         respMenuActive = true;
@@ -152,3 +182,41 @@ function responsiveMenu(){
     }
 }
 
+function sectionAboutMeAnimation(){
+    
+    let AboutMeTop = AboutMe.getBoundingClientRect().top
+    let lenguajes = document.getElementById('lenguajes');
+    let programas = document.getElementById('programas');
+    let lenguajesTop =  lenguajes.getBoundingClientRect().top;
+    
+    if (AboutMeTop<Height-100){AboutMe.style.transform="translateY(0px)"}
+    if (lenguajesTop<Height-200){
+        setTimeout(function(){
+            lenguajes.style.width="50%";
+            setTimeout(function(){
+                    programas.style.display="block"
+                    setTimeout(function(){
+                        programas.classList.add("fade-effect-active")
+                        setTimeout(function(){
+                        
+                            for (let i = 1;i<=8; i++){
+                                setTimeout(function(){document.querySelector(".ico"+i).classList.add("fade-effect-active")},i*500)
+                            };
+                                
+                                
+                                
+                            
+                        },200)
+                        
+                        
+                        
+                    },200)
+                    
+            },2000)
+        
+        },1500)
+        
+
+    };
+
+}

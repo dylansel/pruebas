@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
   word-wrap: break-word;
+  
 }
 
 :root {
@@ -145,7 +146,7 @@ body {
   color: var(--primary-font);
   transition: background, color, 0.3s;
   overflow-x: hidden;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
   
 
 }
@@ -158,7 +159,7 @@ body {
   position: fixed;
   width: 100%;
   transition: color 1s, background 0.6s, height 0.2s, backdrop-filter 0.2s, transform 0.5s;
-  z-index: 10;
+  z-index: 40;
 }
 
 .logo-nav {
@@ -235,9 +236,9 @@ body {
 
 
 main {
-  
+  max-width: 1400px;
   margin: auto;
-  width: 90%;
+  width: 92%;
   padding-top: 80px;
 }
 .padre-portada{
@@ -274,7 +275,7 @@ main {
 
 #avatar-portada {
   backdrop-filter: blur(3px);
-  width: 200px;
+  width: 20%;
   background: rgba(233, 233, 233, 0.075);
   border-radius: 20px;
 }
@@ -282,24 +283,25 @@ main {
 #avatar-portada img {
   margin: auto;
   transform: translate(-30px, 0px);
-  width: 200px;
+  width: 100%;
 }
 
 .portada-texto {
-  margin-left: 10%;
+  margin-left: 8%;
 }
 
 .portada-texto h1 {
-  font-size: 60px;
+  font-size: calc(1em + 5vw);
   color: var(--portada-font2);
   font-family: "Hind Madurai";
-  line-height: 3rem;
+  line-height: 1em;
 }
 
 .portada-texto h2 {
-  font-size: 45px;
+  font-size: calc(1em + 3vw);
   color: var(--portada-font1);
   font-family: "Hind Madurai";
+  
 }
 
 .about-me {
@@ -319,17 +321,32 @@ main {
 }
 .conteiner {
   width:95%;
+  max-width:  1000px;
   margin:auto;
-  display: flex;
-  justify-content:space-between;
   margin-top:30px;
   
+}
+.flex {
+  display: flex;
+  justify-content:space-between;
+}
+.grid{
+  display: grid;
+}
+
+.cont{
+  padding:15px;
+  margin: 5% auto ;
 }
 .cont-about .cont{
   border-radius:15px;
   padding:15px;
   margin: 10px;
   background-color: #6868684b;
+}
+#aboutMe{
+  transition: transform 1.5s;
+  transform: translateY(50px);
 }
 .presentacion{
   width:60%;
@@ -341,15 +358,170 @@ main {
 }
 .habilidades .cont li{
   list-style:none;
+}
+
+.icono1{
+  margin-top:15px;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  grid-row: auto;
+  margin: auto;
+}
+.icono2{
   
-  /*list-style-image: url(img/tick.png);
-  list-style-type: disc;
-*/
- 
+  width:67%;
+  margin: 60px auto ;
+  grid-template-columns: 50% 50% ;
+}
+.icon2-programa{
+  margin: 0px auto ;
+}
+.icono{
+  text-align: center;
+  margin: auto;
+  width:100px;
+  display:block;
+  transition: transform .4s, opacity 2s !important;
+}
+.icono h4{
+  font-size:18px;
+  font-family: "Hind Madurai";
+}
+.icono img{
+  width: 80%;
+  margin: auto;
+}
+.iconos{
+  transition: width 3s;
+  width:100%;
+
+}
+.icono:hover{
+  transform: rotate(5deg) scale(1.1) ;
+  
+}
+#lenguajes{
+  width: 100%;
+  transition: width 2s;
+  
+}
+
+#programas{
+  display: none;
+  float: right;
+  width: 50%;
+  opacity: 0;
+
+}
+#programas .icono{
+  opacity: 0;
+}
+.fade-effect-active{
+  transition: opacity 2s;
+  opacity: 1 !important;
+
+}
+
+.portafolios{
+  padding: 10px;
+  margin: auto;
+}
+.box-portafolio{
+  margin: auto;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding:10px;
+}
+.pbox{
+  transition:  height 1s ;
+  box-shadow:0 0 15px rgba(164, 3, 179, 0.712) ;
+  background-color:rgba(255, 242, 242, 0.829) ;
+  width:250px;
+  height:154px;
+  margin:  30px auto;
+  border-radius: 20px;
+}
+.pbox img {
+  width: 100%;
+  border-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: filter .5s;
+  position: relative;
+  z-index:16 ;
+
+}
+
+.pbox img:hover {
+  filter:grayscale(1) blur(0.8px) ;
+}
+.portada-detalles{
+  transition:1s;
+  transform:translateY(-150px);
+  z-index:15;
+}
+.portada-detalles-text-active{
+  transform: translateY(0);
+}
+.portada-detalle-box-active{ 
+  height:290px;
+}
+.portada-detalles h5{
+  margin-top:10px;
+  margin-left: 8px;
+  font-family: "Hind Madurai";
+}
+.portada-detalles p{
+  margin: 15px;
+  margin-top:5px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.portada-detalles .box-click{
+  text-align: center;
+  color: rgb(68, 68, 68);
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.caja-basica{
+  width: 90%;
+  height:600px;
+  margin: auto;
+  background:red;
 }
 
 
 /*scroll styles*/
+
 
 
 body::-webkit-scrollbar {
@@ -368,12 +540,33 @@ body::-webkit-scrollbar-thumb:hover {
   
 }
 
-.caja-basica{
-  width: 90%;
-  height:600px;
-  margin: auto;
-  background:red;
+
+
+
+
+@media screen and (min-width:900px) {
+  .portada {
+    width:100%;
+  }
 }
+
+@media screen and (max-width:900px) {
+  
+ 
+  main {
+    
+    width: 98%;
+    
+  }
+  .conteiner {
+    width:98%;
+    margin:auto;
+    margin-top:30px;
+    
+  }
+  
+}
+
 
 @media screen and (max-width:700px) {
   .navres{
@@ -438,13 +631,7 @@ body::-webkit-scrollbar-thumb:hover {
 .portada {
   flex-direction: column;
 }
-#avatar-portada{
-  width: 50%;
-}
-#avatar-portada img {
-  transform: translate(-20px, 0px);
-  width: 110%;
-}
+
 .portada-texto {
   margin: auto;
   margin-top: 40px;
