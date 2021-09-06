@@ -120,7 +120,6 @@ $('#nav-res').on("click",function(){responsiveMenu()})
 
 let detalleActive= false
 portafolio.addEventListener('mouseover',(e)=>{
-    console.log("activado")
     
     for(let i=0;i<=document.getElementsByClassName('pbox').length;i++){
           $('.portada-detalle-box-active').removeClass("portada-detalle-box-active")
@@ -185,12 +184,18 @@ function responsiveMenu(){
 function sectionAboutMeAnimation(){
     
     let AboutMeTop = AboutMe.getBoundingClientRect().top
-    let lenguajes = document.getElementById('lenguajes');
     let programas = document.getElementById('programas');
+    let lenguajes = document.getElementById('lenguajes');
     let lenguajesTop =  lenguajes.getBoundingClientRect().top;
     
     if (AboutMeTop<Height-100){AboutMe.style.transform="translateY(0px)"}
-    if (lenguajesTop<Height-200){
+    if (Width <700){
+        programas.style.display="block"
+        lenguajes.style.width="100%";
+    }
+    
+    let programasTop = programas.getBoundingClientRect().top;
+    if (lenguajesTop<Height-400 && Width >=700){
         setTimeout(function(){
             lenguajes.style.width="50%";
             setTimeout(function(){
@@ -202,21 +207,40 @@ function sectionAboutMeAnimation(){
                             for (let i = 1;i<=8; i++){
                                 setTimeout(function(){document.querySelector(".ico"+i).classList.add("fade-effect-active")},i*350)
                             };
-                                
-                                
-                                
-                            
+
                         },100)
-                        
-                        
-                        
-                    },100)
+
+                    },200)
                     
             },2000)
         
         },1500)
         
 
+    }else if(programasTop<Height-50 && Width <700){
+        console.log("activadisimo"+programasTop)
+        lenguajes.style.opacity=0;
+        for (let i = 1;i<=13; i++){
+            setTimeout(function(){document.querySelector(".ico"+i).style.opacity=0},i*350)
+        };
+        setTimeout(function(){
+            programas.style.display="block"
+            setTimeout(function(){
+                programas.classList.add("fade-effect-active")
+                setTimeout(function(){
+                
+                    for (let i = 1;i<=13; i++){
+                        setTimeout(function(){document.querySelector(".ico"+i).classList.add("fade-effect-active")},i*350)
+                    };
+                    setTimeout(function(){
+                        lenguajes.classList.add("fade-effect-active")
+                    },2500)
+                },100)
+
+            },200)
+            
+    },2000)
     };
 
 }
+
