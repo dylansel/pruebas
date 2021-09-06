@@ -110,7 +110,7 @@ function scrollactive() {
     if(!respMenuActive ){navanimate()}
     sectionNavOn()
     sectionAboutMeAnimation()
-
+    if (Width <=600){sectionPortafolioAnimation()}
 }
 
 
@@ -244,3 +244,17 @@ function sectionAboutMeAnimation(){
 
 }
 
+function sectionPortafolioAnimation(){
+    portadas = document.getElementsByClassName('pbox')
+    portadaDetalles = document.getElementsByClassName('portada-detalles')
+    portadasTop = portadas[0].getBoundingClientRect().top
+    if(portadasTop < Height-400 )
+    for (let i = 0;i<=portadas.length;i++){
+        setTimeout(function(){
+            //portadas[i].classList.toggle('portada-detalle-box-active')
+            //portadaDetalles[i].classList.toggle('portada-detalles-text-active')
+            $(portadas[i]).addClass("portada-detalle-box-active")
+            $(portadaDetalles[i]).addClass("portada-detalles-text-active")
+        },i*1000)
+    };
+}
