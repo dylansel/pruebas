@@ -218,7 +218,7 @@ function sectionAboutMeAnimation(){
         
 
     }else if(programasTop<Height-50 && Width <700){
-        console.log("activadisimo"+programasTop)
+        
         lenguajes.style.opacity=0;
         for (let i = 1;i<=13; i++){
             setTimeout(function(){document.querySelector(".ico"+i).style.opacity=0},i*350)
