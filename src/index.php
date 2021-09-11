@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="src/app.css">
 </head>
 <body>
-    <h1>Holaaaaaaaaa</h1>
+<?php echo '<h2>Hola Mundo</h2>'; ?>
 
 
 
 </body>
 </html>
+
+<?php
