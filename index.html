@@ -1,27 +1,149 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email</title>
-    <link rel="stylesheet" href="src/app.css">
-</head>
-<body>
-    <div class="padre_principal_centrado">
-        <div class="box_form">
-            <h2>Email</h2>
-            <form action="src/index.phpt" method="post">
-                <div class="cont"><label for="" class="form_label">Email:</label><input type="text" class="input_text" required></div>
-                <div class="cont"><label for="" class="form_label">Asunto:</label><input type="text" class="input_text" required></div>
-                <div class="cont-mensaje"><label for="" class="form_label">Mensaje:</label><br><textarea class="input_textarea"></textarea></div>
-                <input type="submit" class="boton_submit">
-            </form>
-            <h2></h2>
+    <title>Ejercicios del DOM</title>
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
+        integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://kit.fontawesome.com/c7d9395cbb.js" crossorigin="anonymous"></script>
+    </head>
+
+<body data-dark >
+    <header class="header" data-dark>
+        <h2 class="titulo">Ejercicios del DOM</h2>
+    </header>
+    
+    <button class="btoScroll  hamburger btnScroll hidden" id="btnScroll" type="button" data-dark>
+        <div class="flecha" >
+            <i class="fa-solid fa-arrow-up"></i>
         </div>
+    </button>
+    <button class="hamburger btoDark btnDark " id="btnDark" type="button" data-dark>
+
+            <i class="flecha fa-solid fa-moon" ></i>
+
+    </button>
+    <button class="btoMenu  hamburger hamburger--vortex " id="btnMenu" type="button" data-dark>
+        <span class="hamburger-box">
+            <span class="hamburger-inner "></span>
+        </span>
+    </button>
+    
+    
+
+    <div class="menu ">
+        <nav>
+            <ul>
+                <li><a href="#seccion1" class="seccion-menu encabezado">Reloj Dijital</a></li>
+                <li><a href="#seccion2" class="seccion-menu encabezado">Eventos del teclado</a></li>
+                <li><a href="#seccion3" class="seccion-menu encabezado">Cuenta Regresiva</a></li>
+                <li><a href="#seccion4" class="seccion-menu encabezado">Responsible con JavaScript</a></li>
+                <li><a href="#seccion5" class="seccion-menu encabezado">Responsive Tester</a></li>
+                <li><a href="#seccion6" class="seccion-menu encabezado">Deteccion de Dispositivo</a></li>
+                <li><a href="#seccion7" class="seccion-menu encabezado">Deteccion de Conexion </a></li>
+                <li><a href="#seccion8" class="seccion-menu encabezado">Camara Web</a></li>
+                <li><a href="#seccion9" class="seccion-menu encabezado">Geolocalizacion</a></li>
+                <li><a href="#seccion10" class="seccion-menu encabezado">Filtro de Búsqueda</a></li>
+                <li><a href="#seccion11" class="seccion-menu encabezado">Sorteo Digital</a></li>
+                <li><a href="#seccion12" class="seccion-menu encabezado">12</a></li>
+                <li><a href="#seccion13" class="seccion-menu encabezado">13</a></li>
+                <li><a href="#seccion14" class="seccion-menu encabezado">14</a></li>
+                <li><a href="#seccion15" class="seccion-menu encabezado">15</a></li>
+                
+            </ul>
+        </nav>
     </div>
-
-
-
+    <main class="secciones">
+        <section class="seccion-principal encabezado" id="seccion1">Seccion 1 - Reloj
+            <div class="btoms">
+                <div class="reloj" id="reloj"></div>
+                <button id="btoIniciarR">Iniciar Reloj</button>
+                <button id="btoFinalizarR">Finalizar Reloj</button>
+                <button id="btoIniciarA">Iniciar alarma</button>
+                <button id="btoFinalizarA">Fnializar alarma</button>
+            </div>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion2">Seccion 2 - Eventos del teclado
+            <div class="container-ball">
+                <div class="ball"></div>
+            </div>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion3">Seccion 3 - Temporizador
+            <div id ="contTempori" ></div>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion4">Seccion 4 - Responsible con JavaScript
+            <div id="youtube">
+                
+            </div>   
+            <div id="gmaps" >
+                
+            </div> 
+            
+            
+        </section>
+        <section class="seccion-principal encabezado" id="seccion5">Seccion 5 - Responsive Tester
+            <form class="form-tester" id="responsive-tester" action="">
+                <input class="inputForm" name="direccion" id="iptAddress" type="url" placeholder="https://www.example.com/" required>
+                <input class="inputForm" name="width" id="iptWidth" type="number" step="50" placeholder="width" required>
+                <input class="inputForm" name="height" id="iptHeight" type="number" step="50" placeholder="height" required>
+                <div>
+                    <input class="btnProbar" name="probar" type="submit" value="Probar"></input>
+                    <input class="btnCerrar" name="cerrar" type="button" value="Cerrar"></input>
+                </div>
+            </form>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion6">Seccion 6 - Deteccion de Dispositivo <br>(user agent)
+            <div id="user-device"></div>
+            
+        </section>
+        <section class="seccion-principal encabezado" id="seccion7">Seccion 7 - Deteccion de Conexion</section>
+        <section class="seccion-principal encabezado" id="seccion8">Seccion 8 - Deteccion de la Camara Web
+            
+            <div >
+                <div><button id="btnActivarWebcam">Activar Camara Web</button></div>
+                <div id="webcamErr"></div>
+                <div class="contVideo">
+                    <video  id="webcam" autoplay></video>
+                    <div><button class="btn-photo" id="btnPhoto"><i class="fa-solid fa-camera"></i></button></div>
+                    <canvas id="canvasPhoto"></canvas>
+                    <div ><button class="btn-photo hidden" id="btnDownload"><i class="fa-solid fa-download"></i></button></div>
+                </div>
+                
+            </div>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion9">Seccion 9 - Geolocalizacion
+            <div id="geo-container"></div>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion10">Seccion 10 - Filtros de Búsquedas
+            <div>
+                <input type="text" id="search">
+            </div>
+            <div class="contCards">
+                
+            </div>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion11">Seccion 11 - Sorteo Digital
+            <br>
+            <textarea name="" id="inputSorteo" cols="30" style="resize:none;" rows="10"fixed placeholder="Ingrese las palabras a sortear separadas por comas. Ej: Dylan, Sofia, Matias,Tobi,Martu"></textarea>
+            <br><button class="btnSorteo">Sortear</button>
+            <h4 class="cont-ganador"></h4>
+        </section>
+        <section class="seccion-principal encabezado" id="seccion12">Seccion 12 - 
+        </section>
+        <section class="seccion-principal encabezado" id="seccion13">Seccion 13 - 
+        </section>
+        <section class="seccion-principal encabezado" id="seccion14">Seccion 14 - 
+        </section>
+        <section class="seccion-principal encabezado" id="seccion15">Seccion 15 - 
+        </section>
+        
+    </main>
+    <script src="src/js/index.js" type="module"></script>
 </body>
+
 </html>
