@@ -12,6 +12,10 @@ import webCam from "./webCam.js";
 import getGeolocation from "./geolocalizacion.js";
 import { loadCards, search } from "./search.js";
 import sorteo from "./sorteo.js";
+import slider from "./slider.js";
+import scrollSpy from "./scrollSpy.js";
+import smartVideo from "./smart-video.js";
+import contactFormValidator from "./validaciones_formulario.js";
 const d = document;
 d.addEventListener("DOMContentLoaded",(e)=>{
    console.log("Cargo la pagina")
@@ -44,6 +48,10 @@ d.addEventListener("DOMContentLoaded",(e)=>{
    loadCards(".contCards")
    search("search",".card")
    sorteo("inputSorteo",".btnSorteo",".cont-ganador")
+   slider();
+   scrollSpy();
+   smartVideo();
+   contactFormValidator();
 })
 d.addEventListener("click", function(e) {
    if(e.target.matches("#btnActivarWebcam")){
