@@ -3,7 +3,6 @@ const d = document;
 export default function contactFormValidator(){
     const $form = d.querySelector(".contact-form"),
     $inputs = d.querySelectorAll(".contact-form [required]")
-    console.log($inputs)
 
     $inputs.forEach(input=>{
         const $span = d.createElement(`span`);
@@ -16,7 +15,6 @@ export default function contactFormValidator(){
     })
 
     d.addEventListener("keyup",e=>{
-        console.log("keyup")
         if(e.target.matches(".contact-form [required]")){
             let $input = e.target,
             pattern = $input.pattern || $input.dataset.pattern;
@@ -36,4 +34,19 @@ export default function contactFormValidator(){
             }
         }
     })
+
+
+    d.addEventListener("submit", function(e) {
+        //e.preventDefault();
+        const $loader = d.querySelector(".contact-form-loader"),
+        $response = d.querySelector(".contact-form-response")
+        $loader.classList.remove("none");
+        setTimeout(() =>{
+            $loader.classList.add("none")
+            $response.classList.remove("none")
+            setTimeout(() =>$response.classList.add("none"),3000)
+            $form.reset();
+        },2000)
+
+    });
 }

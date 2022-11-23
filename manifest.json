@@ -1,0 +1,39 @@
+{
+    "name": "Ejercicios del dom",
+    "short_name": "DOM",
+    "description": "Esta es mi primera pagina PWA con el DOM",
+    "background_color": "#2B2B2B",
+    "theme_color": "#F0DB4F",
+    "orientation": "portrait", 
+    "display": "standalone", 
+    "start_url": "./?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
+    "icons": [
+      {
+        "src": "./src/assets/Logos/Logo_1024.png",
+        "sizes": "1024x1024",
+        "type": "image/png"
+      },
+      {
+        "src": "./src/assets/Logos/Logo_512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "./src/assets/Logos/Logo_256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      },
+      {
+        "src": "./src/assets/Logos/Logo_128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+      },
+      {
+        "src": "./src/assets/Logos/Logo_64",
+        "sizes": "64x64",
+        "type": "image/png"
+      }
+    ]
+  }

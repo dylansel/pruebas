@@ -16,7 +16,9 @@ import slider from "./slider.js";
 import scrollSpy from "./scrollSpy.js";
 import smartVideo from "./smart-video.js";
 import contactFormValidator from "./validaciones_formulario.js";
+import speechReader from "./narrador.js";
 const d = document;
+console.log("holaaaa");
 d.addEventListener("DOMContentLoaded",(e)=>{
    console.log("Cargo la pagina")
    hamburguerMenu(".btoMenu",'.menu'); 
@@ -61,3 +63,13 @@ d.addEventListener("click", function(e) {
 })
 
 networkStatus();
+speechReader();
+
+//parte de PWA que llamo al archivo SW, service worked
+
+if ('serviceWorker' in navigator) {
+   console.log('registro')
+   navigator.serviceWorker.register('/PWA/sw.js')
+     .then(reg => console.log('Registro de SW exitoso', reg))
+     .catch(err => console.warn('Error al tratar de registrar el sw', err))
+ }

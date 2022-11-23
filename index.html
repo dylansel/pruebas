@@ -6,12 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios del DOM</title>
+    <!-- Etiquetas para PWA-->
+    
+    <meta name="theme-color" content="#FFFF00">
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="shortcut icon" type="image/png" href="./src/assets/Logos/Logo_1024.png">
+    <link rel="apple-touch-icon" href="./src/assets/Logos/Logo_256.png">
+    <link rel="apple-touch-startup-image" href="./src/assets/Logos/Logo_1024.png">
+    <link rel="manifest" href="./manifest.json">
+
+    <!-- Etiquetas de la pagina-->
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css"
         integrity="sha512-+mlclc5Q/eHs49oIOCxnnENudJWuNqX5AogCiqRBgKnpoplPzETg2fkgBFVC6WYUVxYYljuxPNG8RE7yBy1K+g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://kit.fontawesome.com/c7d9395cbb.js" crossorigin="anonymous"></script>
     </head>
+
+
 
 <body data-dark >
     <header class="header" data-dark>
@@ -53,7 +68,7 @@
                 <li><a href="#seccion12" data-scroll-spy  class="seccion-menu encabezado">Responsive Slider</a></li>
                 <li><a href="#seccion13" data-scroll-spy  class="seccion-menu encabezado">Smart video</a></li>
                 <li><a href="#seccion14" data-scroll-spy  class="seccion-menu encabezado">Validacion de Formularios</a></li>
-                <li><a href="#seccion15" data-scroll-spy  class="seccion-menu encabezado">15</a></li>
+                <li><a href="#seccion15" data-scroll-spy  class="seccion-menu encabezado">Narrador</a></li>
                 
             </ul>
         </nav>
@@ -172,7 +187,7 @@
             </div>
         </section>
         <section data-scroll-spy class="seccion-principal encabezado" id="seccion14">Seccion 14 - validacion de formularios
-        <form action="" class="contact-form">
+        <form action="https://formsubmit.co/86b655f82c7219b303a2fecb8313a0d9" method="POST" target="_blank" class="contact-form">
             <legend>Envianos tu comentarios</legend>
             <input type="text" name="name" placeholder="Nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Nombre solo acepta letras y espacios en blanco" required>
             <input type="email" name="email" placeholder="Email" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" title="Email incorrecto" required>
@@ -187,7 +202,16 @@
             </div>
         </form>
         </section>
-        <section data-scroll-spy class="seccion-principal encabezado" id="seccion15">Seccion 15 - 
+        <section data-scroll-spy class="seccion-principal encabezado" id="seccion15">Seccion 15 - Narrador
+            <div>
+                <select name="voses" id="speech-select" value="Seleccione una opcion de las siguientes" >
+                    <option>Seleccione una voz</option>
+                </select>
+                <br><br>
+                <textarea name="" id="speech-text" cols="50" rows="10" placeholder="Ingresa el texto para leer"></textarea>
+                <br>
+                <button id="speech-btn">Narrar</button>
+            </div>
         </section>
         
     </main>
